@@ -15,12 +15,11 @@ library(RColorBrewer)
 library(lattice)
 library(vegan)
 
-##To create the turbulence vector
-#turb<-runif(n=51, min=0.1, max=2)
-#turb<-as.data.frame(turb)
-#write.csv(turb,"turb.csv")
-#setwd("/Users/bebache/Desktop/Spillover/Revision")
-setwd("C:/Users/Zach/Downloads/GinasRStuff")
+##To create the turbulence vector #Do this first and then save the 'turb' vector to use in the model
+turb<-runif(n=51, min=0.1, max=2)
+turb<-as.data.frame(turb)
+write.csv(turb,"turb.csv")
+setwd() #set working directory to upload all data frames and figures
 turb<-read.csv("turb.csv")
 turb<-turb[,2]
 
